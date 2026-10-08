@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safwan Sabit Farabi | EEE Student & Engineering Enthusiast</title>
+    <meta name="description" content="Portfolio of Safwan Sabit Farabi, an Electrical & Electronic Engineering student at International Islamic University Chittagong, passionate about electronics, engineering projects, technology and problem solving.">
+    <meta name="keywords" content="Safwan Sabit Farabi, EEE Student, IIUC, Electrical Engineering Portfolio, Chittagong Bangladesh, Circuit Design, Microcontroller, MATLAB, Proteus">
+    <meta name="author" content="Safwan Sabit Farabi">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Safwan Sabit Farabi | EEE Student & Engineering Enthusiast">
+    <meta property="og:description" content="Electrical & Electronic Engineering student at IIUC. CGPA 3.65. Explore projects, technical skills, and experience.">
+    <meta property="og:image" content="assets/profile.jpg">
+
+    <!-- Fonts: Outfit for clean headers, JetBrains Mono for technical touch -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6 for Engineering & UI Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkbg: '#0a0f1d',
+                        darkcard: '#111827',
+                        cyanaccent: '#00f2fe',
+                        blueaccent: '#4facfe',
+                        lightbg: '#f8fafc',
+                        lightcard: '#ffffff'
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --bg-color: #0a0f1d;
+            --card-bg: rgba(17, 24, 39, 0.7);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent-cyan: #00f2fe;
+            --accent-blue: #4facfe;
+            --glow: rgba(0, 242, 254, 0.25);
+        }
+
+        .light {
+            --bg-color: #f8fafc;
+            --card-bg: rgba(255, 255, 255, 0.85);
+            --border-color: rgba(0, 0, 0, 0.08);
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --glow: rgba(79, 172, 254, 0.2);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Outfit', sans-serif;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0f1d;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00f2fe;
+        }
+
+        /* Glassmorphism Effect */
+        .glass-panel {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+        }
+
+        .glass-nav {
+            background: rgba(10, 15, 29, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        .light .glass-nav {
+            background: rgba(248, 250, 252, 0.85);
+        }
+
+        /* Electric Gradient Text */
+        .gradient-text {
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gradient-border {
+            position: relative;
+            border-radius: 9999px;
+            background: linear-gradient(135deg, #00f2fe, #4facfe);
+            padding: 3px;
+        }
+
+        /* Custom Animated Rings for Profile Hero */
+        @keyframes spin-slow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes reverse-spin {
+            0% { transform: rotate(360deg); }
+            100% { transform: rotate(0deg); }
+        }
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.4; filter: blur(20px); }
+            50% { opacity: 0.8; filter: blur(30px); }
+        }
+
+        .animate-spin-slow {
+            animation: spin-slow 20s linear infinite;
+        }
+        .animate-reverse-spin {
+            animation: reverse-spin 25s linear infinite;
+        }
+        .animate-float {
+            animation: float-slow 4s ease-in-out infinite;
+        }
+        .animate-glow {
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+
+        /* Custom Cursor */
+        #custom-cursor {
+            pointer-events: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #00f2fe;
+            border-radius: 50%;
+            transition: transform 0.15s ease-out, opacity 0.2s ease;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+        #custom-cursor-dot {
+            pointer-events: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            width: 6px;
+            height: 6px;
+            background-color: #00f2fe;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+
+        /* Modal Overlay Transition */
+        .modal-active {
+            opacity: 1 !important;
+            pointer-events: auto !important;
+        }
+        .modal-card {
+            transform: scale(0.95);
+            transition: transform 0.3s ease-out;
+        }
+        .modal-active .modal-card {
+            transform: scale(1);
+        }
+
+        /* Accessibility: Reduced motion settings */
+        @media (prefers-reduced-motion: reduce) {
+            *, ::before, ::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</head>
+<body class="selection:bg-cyanaccent selection:text-black">
+
+    <!-- Custom Cursor (Desktop Only) -->
+    <div id="custom-cursor"></div>
+    <div id="custom-cursor-dot"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-cyanaccent to-blueaccent z-50 transition-all duration-150" style="width: 0%"></div>
+
+    <!-- Page Loading Screen -->
+    <div id="loader" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-darkbg transition-opacity duration-500">
+        <div class="relative flex items-center justify-center">
+            <div class="w-20 h-20 border-4 border-cyanaccent/20 border-t-cyanaccent rounded-full animate-spin"></div>
+            <i class="fa-solid fa-microchip text-cyanaccent text-2xl absolute"></i>
+        </div>
+        <p class="mt-4 font-mono text-xs tracking-widest text-cyanaccent uppercase animate-pulse">Initializing Circuit Hardware...</p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-40 transition-all duration-300 py-4 glass-nav border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#home" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-cyanaccent to-blueaccent flex items-center justify-center text-darkbg font-bold font-mono text-lg shadow-lg shadow-cyanaccent/20 group-hover:scale-105 transition-transform">
+                    SF
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-bold tracking-tight text-base sm:text-lg leading-tight group-hover:text-cyanaccent transition-colors">Safwan Sabit Farabi</span>
+                    <span class="text-[10px] font-mono text-cyanaccent uppercase tracking-wider">EEE Engineer</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex items-center gap-6 font-medium text-sm">
+                <a href="#home" class="nav-link hover:text-cyanaccent transition-colors py-1 relative active" data-section="home">Home</a>
+                <a href="#about" class="nav-link hover:text-cyanaccent transition-colors py-1 relative" data-section="about">About</a>
+                <a href="#education" class="nav-link hover:text-cyanaccent transition-colors py-1 relative" data-section="education">Education</a>
+                <a href="#skills" class="nav-link hover:text-cyanaccent transition-colors py-1 relative" data-section="skills">Skills</a>
+                <a href="#experience" class="nav-link hover:text-cyanaccent transition-colors py-1 relative" data-section="experience">Leadership</a>
+                <a href="#projects" class="nav-link hover:text-cyanaccent transition-colors py-1 relative" data-section="projects">Projects</a>
+                <a href="#interests" class="nav-link hover:text-cyanaccent transition-colors py-1 relative" data-section="interests">Interests</a>
+                <a href="#contact" class="nav-link hover:text-cyanaccent transition-colors py-1 relative" data-section="contact">Contact</a>
+            </div>
+
+            <!-- Header Controls & Actions -->
+            <div class="flex items-center gap-3">
+                <!-- Dark/Light Theme Toggle Button -->
+                <button id="theme-toggle" aria-label="Toggle Theme" class="p-2.5 rounded-lg glass-panel hover:border-cyanaccent/50 text-cyanaccent transition-all text-sm">
+                    <i class="fa-solid fa-moon dark:hidden"></i>
+                    <i class="fa-solid fa-sun hidden dark:block"></i>
+                </button>
+
+                <!-- Custom Cursor Toggle (Desktop only) -->
+                <button id="cursor-toggle" aria-label="Toggle Cursor" class="hidden lg:flex p-2.5 rounded-lg glass-panel hover:border-cyanaccent/50 text-cyanaccent transition-all text-sm" title="Toggle Cursor Style">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                </button>
+
+                <a href="assets/cv.pdf" download="Safwan_Sabit_Farabi_CV.pdf" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-cyanaccent to-blueaccent text-darkbg font-semibold text-xs tracking-wider uppercase hover:shadow-lg hover:shadow-cyanaccent/30 hover:scale-105 transition-all">
+                    <i class="fa-solid fa-download"></i> CV
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" aria-label="Open Navigation Menu" class="md:hidden p-2.5 rounded-lg glass-panel text-cyanaccent focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden glass-panel border-t border-white/10 px-6 py-6 mt-4 space-y-4">
+            <a href="#home" class="mobile-nav-link block font-medium hover:text-cyanaccent">Home</a>
+            <a href="#about" class="mobile-nav-link block font-medium hover:text-cyanaccent">About</a>
+            <a href="#education" class="mobile-nav-link block font-medium hover:text-cyanaccent">Education</a>
+            <a href="#skills" class="mobile-nav-link block font-medium hover:text-cyanaccent">Skills</a>
+            <a href="#experience" class="mobile-nav-link block font-medium hover:text-cyanaccent">Leadership & Experience</a>
+            <a href="#projects" class="mobile-nav-link block font-medium hover:text-cyanaccent">Projects</a>
+            <a href="#interests" class="mobile-nav-link block font-medium hover:text-cyanaccent">Interests</a>
+            <a href="#contact" class="mobile-nav-link block font-medium hover:text-cyanaccent">Contact</a>
+            <a href="assets/cv.pdf" download="Safwan_Sabit_Farabi_CV.pdf" class="inline-flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-lg bg-gradient-to-r from-cyanaccent to-blueaccent text-darkbg font-bold text-xs uppercase">
+                <i class="fa-solid fa-download"></i> Download CV
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-24 pb-12 overflow-hidden">
+        <!-- Interactive Canvas Circuit Nodes Animated Background -->
+        <canvas id="hero-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-40"></canvas>
+
+        <!-- Ambient Color Blur Background Lights -->
+        <div class="absolute top-1/4 left-1/4 w-72 h-72 bg-cyanaccent/20 rounded-full blur-3xl animate-glow pointer-events-none"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blueaccent/15 rounded-full blur-3xl animate-glow pointer-events-none" style="animation-delay: 1.5s;"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Text Column -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-panel border-cyanaccent/30 text-cyanaccent font-mono text-xs tracking-wider uppercase">
+                        <span class="w-2 h-2 rounded-full bg-cyanaccent animate-ping"></span>
+                        Engineering Student • IIUC
+                    </div>
+
+                    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+                        Hi, I'm <br>
+                        <span class="gradient-text">Safwan Sabit Farabi</span>
+                    </h1>
+
+                    <!-- Dynamic Typing Text Banner -->
+                    <div class="font-mono text-lg sm:text-2xl font-semibold text-gray-300 dark:text-gray-300 h-8 flex items-center justify-center lg:justify-start">
+                        <span class="text-cyanaccent mr-2">&gt;</span>
+                        <span id="typed-text" class="border-r-2 border-cyanaccent pr-1"></span>
+                    </div>
+
+                    <p class="text-muted text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Passionate about electrical engineering, electronics, technology, problem solving and innovative engineering solutions. Focused on translating academic excellence into impactful technical applications.
+                    </p>
+
+                    <!-- Hero Quick Stats Badge Row -->
+                    <div class="pt-2 flex flex-wrap justify-center lg:justify-start gap-4 font-mono text-xs">
+                        <div class="glass-panel px-4 py-2 rounded-lg flex items-center gap-2 border-white/5">
+                            <i class="fa-solid fa-graduation-cap text-cyanaccent"></i>
+                            <span>BSc in EEE</span>
+                        </div>
+                        <div class="glass-panel px-4 py-2 rounded-lg flex items-center gap-2 border-white/5">
+                            <i class="fa-solid fa-award text-cyanaccent"></i>
+                            <span>CGPA: <strong>3.65</strong></span>
+                        </div>
+                        <div class="glass-panel px-4 py-2 rounded-lg flex items-center gap-2 border-white/5">
+                            <i class="fa-solid fa-location-dot text-cyanaccent"></i>
+                            <span>Chattogram, BD</span>
+                        </div>
+                    </div>
+
+                    <!-- Call To Action Buttons -->
+                    <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4">
+                        <a href="#projects" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyanaccent to-blueaccent text-darkbg font-bold text-sm tracking-wide uppercase shadow-lg shadow-cyanaccent/25 hover:shadow-cyanaccent/40 hover:scale-105 transition-all flex items-center gap-2">
+                            <span>Explore My Work</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="C:\Users\UESR\Desktop\Farabi Portfolio\New design\CV.png" download="Safwan_Sabit_Farabi_CV.pdf" class="px-6 py-3.5 rounded-xl glass-panel hover:border-cyanaccent/50 text-cyanaccent font-semibold text-sm tracking-wide uppercase transition-all flex items-center gap-2">
+                            <i class="fa-solid fa-file-arrow-down"></i>
+                            <span>Download CV</span>
+                        </a>
+                        <a href="#contact" class="px-6 py-3.5 rounded-xl glass-panel hover:border-white/30 font-semibold text-sm tracking-wide uppercase transition-all">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Profile Visual Column with Rotating Rings & Badges -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 flex items-center justify-center">
+                        
+                        <!-- Outer Rotating Decorative Circuit Rings -->
+                        <div class="absolute inset-0 border border-dashed border-cyanaccent/30 rounded-full animate-spin-slow"></div>
+                        <div class="absolute inset-4 border border-cyanaccent/20 rounded-full animate-reverse-spin"></div>
+                        <div class="absolute inset-8 border-2 border-cyanaccent/10 rounded-full"></div>
+
+                        <!-- Main Profile Avatar Frame -->
+                        <div class="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-full p-2 bg-gradient-to-tr from-cyanaccent via-blueaccent to-purple-600 shadow-2xl shadow-cyanaccent/30 group">
+                            <div class="w-full h-full rounded-full overflow-hidden bg-darkcard relative">
+                                <img src="C:\Users\UESR\Desktop\Farabi Portfolio\New design\Farabi.jpg"" 
+                                     alt="Safwan Sabit Farabi - EEE Student" 
+                                     class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                                     onerror="this.onerror=null; this.src="C:\Users\UESR\Desktop\Farabi Portfolio\New design\Farabi.jpg";">
+                            </div>
+                        </div>
+
+                        <!-- Floating Micro Badges -->
+                        <div class="absolute top-4 left-0 glass-panel px-3 py-1.5 rounded-xl text-xs font-mono border-cyanaccent/40 text-cyanaccent shadow-lg animate-float" style="animation-delay: 0s;">
+                            <i class="fa-solid fa-bolt mr-1"></i> EEE Student
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-mono text-cyanaccent uppercase tracking-widest mb-2">&gt; 01. Profile Summary</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold">About Me</h3>
+                <div class="w-16 h-1 bg-gradient-to-r from-cyanaccent to-blueaccent mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Text Objective Column -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="glass-panel p-8 rounded-2xl relative border-l-4 border-l-cyanaccent shadow-xl">
+                        <i class="fa-solid fa-quote-left text-3xl text-cyanaccent/30 absolute top-4 left-4"></i>
+                        <h4 class="text-xl font-bold mb-3 text-cyanaccent">Career Objective</h4>
+                        <p class="text-base sm:text-lg leading-relaxed text-gray-300 dark:text-gray-300 relative z-10 italic">
+                            "As a dedicated and ambitious Electrical and Electronics Engineering student, I am eager to gain experience in any company to enhance my technical skills and problem-solving ability. I am actively pursuing opportunities to apply my knowledge effectively."
+                        </p>
+                    </div>
+
+                    <p class="text-muted leading-relaxed">
+                        Currently enrolled in the Bachelor of Science program in Electrical & Electronic Engineering at International Islamic University Chittagong (IIUC). Passionate about embedded systems, circuit simulations, hardware automation, and modern tech developments. I thrive in competitive and collaborative environments where technical precision meets problem-solving creativity.
+                    </p>
+
+                    <!-- Key Information Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="p-4 rounded-xl glass-panel border-white/5 flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-cyanaccent/10 text-cyanaccent flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-user-graduate"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-muted uppercase font-mono block">Current Degree</span>
+                                <span class="font-semibold text-sm">BSc in EEE (IIUC)</span>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl glass-panel border-white/5 flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-cyanaccent/10 text-cyanaccent flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-muted uppercase font-mono block">Academic Merit</span>
+                                <span class="font-semibold text-sm">CGPA 3.65 / 4.00</span>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl glass-panel border-white/5 flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-cyanaccent/10 text-cyanaccent flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-muted uppercase font-mono block">Direct Email</span>
+                                <a href="mailto:safwansabitfarabi68@gmail.com" class="font-semibold text-xs sm:text-sm hover:text-cyanaccent transition-colors truncate block">
+                                    safwansabitfarabi68@gmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl glass-panel border-white/5 flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-cyanaccent/10 text-cyanaccent flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-muted uppercase font-mono block">Location</span>
+                                <span class="font-semibold text-sm">Chattogram, Bangladesh</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info Showcase Stat Cards -->
+                <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+                    <div class="glass-panel p-6 rounded-2xl text-center hover:border-cyanaccent/50 transition-all group">
+                        <div class="text-3xl font-mono font-bold text-cyanaccent group-hover:scale-110 transition-transform">3.65</div>
+                        <div class="text-xs uppercase font-mono tracking-wider text-muted mt-2">BSc CGPA</div>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-2xl text-center hover:border-cyanaccent/50 transition-all group">
+                        <div class="text-3xl font-mono font-bold text-blueaccent group-hover:scale-110 transition-transform">5.00</div>
+                        <div class="text-xs uppercase font-mono tracking-wider text-muted mt-2">HSC GPA</div>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-2xl text-center hover:border-cyanaccent/50 transition-all group">
+                        <div class="text-3xl font-mono font-bold text-cyanaccent group-hover:scale-110 transition-transform">5.00</div>
+                        <div class="text-xs uppercase font-mono tracking-wider text-muted mt-2">SSC GPA</div>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-2xl text-center hover:border-cyanaccent/50 transition-all group">
+                        <div class="text-3xl font-mono font-bold text-blueaccent group-hover:scale-110 transition-transform">4+</div>
+                        <div class="text-xs uppercase font-mono tracking-wider text-muted mt-2">Projects</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="py-20 relative bg-black/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-mono text-cyanaccent uppercase tracking-widest mb-2">&gt; 02. Academic Background</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold">Education Timeline</h3>
+                <div class="w-16 h-1 bg-gradient-to-r from-cyanaccent to-blueaccent mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="relative max-w-4xl mx-auto">
+                <!-- Vertical Timeline Center Line -->
+                <div class="absolute left-4 sm:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyanaccent via-blueaccent to-transparent -translate-x-1/2"></div>
+
+                <!-- Education Card 1: BSc in EEE -->
+                <div class="relative mb-12 sm:mb-16 flex flex-col sm:flex-row items-start">
+                    <div class="sm:w-1/2 sm:pr-12 sm:text-right pl-10 sm:pl-0 w-full">
+                        <div class="glass-panel p-6 rounded-2xl hover:border-cyanaccent/50 transition-all relative group">
+                            <span class="inline-block px-3 py-1 rounded-full bg-cyanaccent/10 text-cyanaccent text-xs font-mono font-semibold mb-2">Current Academic Degree</span>
+                            <h4 class="text-xl font-bold text-white">BSc in Electrical & Electronic Engineering</h4>
+                            <p class="text-cyanaccent font-medium text-sm mt-1">International Islamic University Chittagong (IIUC)</p>
+                            <p class="text-muted text-sm mt-2">Acquiring strong fundamentals in circuit design, signal processing, power systems, telecommunication, microprocessors, and engineering software logic.</p>
+                            <div class="mt-4 pt-3 border-t border-white/5 flex items-center sm:justify-end gap-2 font-mono text-xs text-cyanaccent">
+                                <i class="fa-solid fa-award"></i>
+                                <span>CGPA: <strong>3.65 / 4.00</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Timeline Node Pin -->
+                    <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 top-6 w-8 h-8 rounded-full bg-darkbg border-2 border-cyanaccent flex items-center justify-center text-cyanaccent shadow-lg shadow-cyanaccent/50 z-10">
+                        <i class="fa-solid fa-university text-xs"></i>
+                    </div>
+                </div>
+
+                <!-- Education Card 2: HSC -->
+                <div class="relative mb-12 sm:mb-16 flex flex-col sm:flex-row items-start sm:flex-row-reverse">
+                    <div class="sm:w-1/2 sm:pl-12 pl-10 sm:pl-0 w-full">
+                        <div class="glass-panel p-6 rounded-2xl hover:border-cyanaccent/50 transition-all relative group">
+                            <span class="inline-block px-3 py-1 rounded-full bg-blueaccent/10 text-blueaccent text-xs font-mono font-semibold mb-2">Passing Year: 2020</span>
+                            <h4 class="text-xl font-bold text-white">Higher Secondary Certificate (HSC)</h4>
+                            <p class="text-blueaccent font-medium text-sm mt-1">Chattogram Cantonment Public College</p>
+                            <p class="text-muted text-sm mt-2">Completed Science background curriculum with focus on Physics, Chemistry, and Higher Mathematics.</p>
+                            <div class="mt-4 pt-3 border-t border-white/5 flex items-center gap-2 font-mono text-xs text-blueaccent">
+                                <i class="fa-solid fa-star"></i>
+                                <span>GPA: <strong>5.00 / 5.00</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Timeline Node Pin -->
+                    <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 top-6 w-8 h-8 rounded-full bg-darkbg border-2 border-blueaccent flex items-center justify-center text-blueaccent shadow-lg shadow-blueaccent/50 z-10">
+                        <i class="fa-solid fa-school text-xs"></i>
+                    </div>
+                </div>
+
+                <!-- Education Card 3: SSC -->
+                <div class="relative flex flex-col sm:flex-row items-start">
+                    <div class="sm:w-1/2 sm:pr-12 sm:text-right pl-10 sm:pl-0 w-full">
+                        <div class="glass-panel p-6 rounded-2xl hover:border-cyanaccent/50 transition-all relative group">
+                            <span class="inline-block px-3 py-1 rounded-full bg-cyanaccent/10 text-cyanaccent text-xs font-mono font-semibold mb-2">Passing Year: 2018</span>
+                            <h4 class="text-xl font-bold text-white">Secondary School Certificate (SSC)</h4>
+                            <p class="text-cyanaccent font-medium text-sm mt-1">Islami Shamaj Kallyan Parishad High School</p>
+                            <p class="text-muted text-sm mt-2">Foundational science curriculum with stellar academic record.</p>
+                            <div class="mt-4 pt-3 border-t border-white/5 flex items-center sm:justify-end gap-2 font-mono text-xs text-cyanaccent">
+                                <i class="fa-solid fa-star"></i>
+                                <span>GPA: <strong>5.00 / 5.00</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Timeline Node Pin -->
+                    <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 top-6 w-8 h-8 rounded-full bg-darkbg border-2 border-cyanaccent flex items-center justify-center text-cyanaccent shadow-lg shadow-cyanaccent/50 z-10">
+                        <i class="fa-solid fa-book-bookmark text-xs"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs font-mono text-cyanaccent uppercase tracking-widest mb-2">&gt; 03. Technical Competencies</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold">Skills & Proficiencies</h3>
+                <div class="w-16 h-1 bg-gradient-to-r from-cyanaccent to-blueaccent mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Category Tabs Selector Buttons -->
+            <div class="flex justify-center mb-12">
+                <div class="glass-panel p-1.5 rounded-2xl inline-flex gap-2 border-white/10">
+                    <button class="skill-tab-btn active px-5 py-2.5 rounded-xl font-medium text-sm transition-all" data-category="software">
+                        <i class="fa-solid fa-laptop-code mr-2"></i>Software
+                    </button>
+                    <button class="skill-tab-btn px-5 py-2.5 rounded-xl font-medium text-sm transition-all text-muted hover:text-white" data-category="hardware">
+                        <i class="fa-solid fa-microchip mr-2"></i>Hardware
+                    </button>
+                    <button class="skill-tab-btn px-5 py-2.5 rounded-xl font-medium text-sm transition-all text-muted hover:text-white" data-category="languages">
+                        <i class="fa-solid fa-language mr-2"></i>Languages
+                    </button>
+                </div>
+            </div>
+
+            <!-- Skills Display Container -->
+            <div id="skills-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <!-- Skills cards injected dynamically via JavaScript based on tab -->
+            </div>
+        </div>
+    </section>
+
+    <!-- LEADERSHIP & EXPERIENCE SECTION -->
+    <section id="experience" class="py-20 relative bg-black/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-mono text-cyanaccent uppercase tracking-widest mb-2">&gt; 04. Beyond Academics</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold">Co-Curricular & Leadership</h3>
+                <div class="w-16 h-1 bg-gradient-to-r from-cyanaccent to-blueaccent mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Experience Card 1: EEE Club IIUC -->
+                <div class="glass-panel p-8 rounded-2xl hover:border-cyanaccent/50 transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyanaccent to-blueaccent flex items-center justify-center text-darkbg text-2xl font-bold mb-6 shadow-lg shadow-cyanaccent/20 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <span class="text-xs font-mono text-cyanaccent uppercase tracking-wider">Departmental Leadership</span>
+                        <h4 class="text-xl font-bold mt-1 text-white">EEE Club IIUC</h4>
+                        <p class="text-cyanaccent font-medium text-sm mt-1">Office & IT Secretary</p>
+                        <p class="text-muted text-sm mt-4 leading-relaxed">
+                            Worked as "Office & IT Secretary" in EEE Club IIUC. Managed IT operations, official communications, event coordination, and served in multiple positions within the club.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-white/10 text-xs font-mono text-gray-400">
+                        <i class="fa-solid fa-check-double text-cyanaccent mr-1"></i> Executive Leadership Role
+                    </div>
+                </div>
+
+                <!-- Experience Card 2: BNCC Cadet -->
+                <div class="glass-panel p-8 rounded-2xl hover:border-cyanaccent/50 transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyanaccent to-blueaccent flex items-center justify-center text-darkbg text-2xl font-bold mb-6 shadow-lg shadow-cyanaccent/20 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <span class="text-xs font-mono text-cyanaccent uppercase tracking-wider">National Service & Discipline</span>
+                        <h4 class="text-xl font-bold mt-1 text-white">BNCC Cadet</h4>
+                        <p class="text-cyanaccent font-medium text-sm mt-1">Bangladesh National Cadet Corps</p>
+                        <p class="text-muted text-sm mt-4 leading-relaxed">
+                            Served as a dedicated cadet in the Bangladesh National Cadet Corps, building rigorous discipline, leadership skills, crisis response awareness, and team dynamic capabilities.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-white/10 text-xs font-mono text-gray-400">
+                        <i class="fa-solid fa-check-double text-cyanaccent mr-1"></i> Discipline & Leadership
+                    </div>
+                </div>
+
+                <!-- Experience Card 3: Rongdhonu Club -->
+                <div class="glass-panel p-8 rounded-2xl hover:border-cyanaccent/50 transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyanaccent to-blueaccent flex items-center justify-center text-darkbg text-2xl font-bold mb-6 shadow-lg shadow-cyanaccent/20 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                        </div>
+                        <span class="text-xs font-mono text-cyanaccent uppercase tracking-wider">Social Organization</span>
+                        <h4 class="text-xl font-bold mt-1 text-white">Rongdhonu Club</h4>
+                        <p class="text-cyanaccent font-medium text-sm mt-1">Finance Executive</p>
+                        <p class="text-muted text-sm mt-4 leading-relaxed">
+                            Managed financial records, budget planning, and fundraising execution for community social welfare activities in the local organization.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-white/10 text-xs font-mono text-gray-400">
+                        <i class="fa-solid fa-check-double text-cyanaccent mr-1"></i> Financial Management
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs font-mono text-cyanaccent uppercase tracking-widest mb-2">&gt; 05. Practical Engineering</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold">Departmental Projects</h3>
+                <div class="w-16 h-1 bg-gradient-to-r from-cyanaccent to-blueaccent mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Project Category Filter Buttons -->
+            <div class="flex justify-center mb-10">
+                <div class="glass-panel p-1.5 rounded-2xl flex flex-wrap justify-center gap-2 border-white/10">
+                    <button class="project-filter-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all" data-filter="all">All Projects</button>
+                    <button class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-medium text-muted hover:text-white transition-all" data-filter="automation">Automation</button>
+                    <button class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-medium text-muted hover:text-white transition-all" data-filter="electronics">Electronics & Security</button>
+                    <button class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-medium text-muted hover:text-white transition-all" data-filter="control">Control Systems</button>
+                </div>
+            </div>
+
+            <!-- Projects Grid Gallery -->
+            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Project Card 1 -->
+                <div class="project-card glass-panel rounded-2xl overflow-hidden hover:border-cyanaccent/50 transition-all flex flex-col justify-between group" data-category="automation">
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-cyanaccent/10 text-cyanaccent font-mono text-xs font-semibold uppercase">Automation / Control</span>
+                            <i class="fa-solid fa-seedling text-cyanaccent text-xl"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white group-hover:text-cyanaccent transition-colors">Smart Greenhouse</h4>
+                        <p class="text-cyanaccent font-medium text-sm mt-1">Automated Temperature and Humidity Control</p>
+                        <p class="text-muted text-sm mt-4 leading-relaxed">
+                            An automated agricultural engineering system designed to maintain optimal crop growing conditions through real-time feedback temperature and humidity regulation.
+                        </p>
+                    </div>
+                    <div class="px-8 pb-8 pt-0">
+                        <button class="open-modal-btn w-full py-3 rounded-xl glass-panel hover:bg-cyanaccent hover:text-darkbg font-semibold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2"
+                                data-title="Smart Greenhouse"
+                                data-subtitle="Automated Temperature and Humidity Control"
+                                data-category="Automation & Environmental Control"
+                                data-desc="This engineering project centers on establishing an automated micro-climate environment for agricultural efficiency. By continually monitoring temperature and relative humidity levels using calibrated sensors, the system dynamically actuates cooling fans, heating elements, or misting systems to maintain preset optimal ranges. Microcontroller logic handles threshold feedback without requiring manual human intervention.">
+                            <span>View Details</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card glass-panel rounded-2xl overflow-hidden hover:border-cyanaccent/50 transition-all flex flex-col justify-between group" data-category="electronics">
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-blueaccent/10 text-blueaccent font-mono text-xs font-semibold uppercase">Electronics / Security</span>
+                            <i class="fa-solid fa-eye text-blueaccent text-xl"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white group-hover:text-cyanaccent transition-colors">Electronic Eye Control Security System</h4>
+                        <p class="text-blueaccent font-medium text-sm mt-1">Light-Sensitive Intrusion Detector</p>
+                        <p class="text-muted text-sm mt-4 leading-relaxed">
+                            A electronic security system utilizing optical sensing triggers to detect unauthorized presence or door movement for instant alarm actuation.
+                        </p>
+                    </div>
+                    <div class="px-8 pb-8 pt-0">
+                        <button class="open-modal-btn w-full py-3 rounded-xl glass-panel hover:bg-cyanaccent hover:text-darkbg font-semibold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2"
+                                data-title="Electronic Eye Control Security System"
+                                data-subtitle="Optical Security Detection Unit"
+                                data-category="Electronics & Security Systems"
+                                data-desc="An essential electronic security implementation built around optical light sensor principles (such as LDR or photodiode circuits). The system operates by detecting light intensity shifts caused by an intruder passing through a line of sight. Upon sensing a disruption, an analog operational amplifier comparator circuit triggers an alarm horn or visual indicator latch.">
+                            <span>View Details</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card glass-panel rounded-2xl overflow-hidden hover:border-cyanaccent/50 transition-all flex flex-col justify-between group" data-category="control">
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-cyanaccent/10 text-cyanaccent font-mono text-xs font-semibold uppercase">Control Systems</span>
+                            <i class="fa-solid fa-tower-broadcast text-cyanaccent text-xl"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white group-hover:text-cyanaccent transition-colors">Remote Control Switching System</h4>
+                        <p class="text-cyanaccent font-medium text-sm mt-1">Wireless Load Switching Circuit</p>
+                        <p class="text-muted text-sm mt-4 leading-relaxed">
+                            A wireless electrical load switching solution engineered to remotely trigger power relays safely from a distance.
+                        </p>
+                    </div>
+                    <div class="px-8 pb-8 pt-0">
+                        <button class="open-modal-btn w-full py-3 rounded-xl glass-panel hover:bg-cyanaccent hover:text-darkbg font-semibold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2"
+                                data-title="Remote Control Switching System"
+                                data-subtitle="Wireless Actuation System"
+                                data-category="Control Systems & Power Switching"
+                                data-desc="This departmental project explores wireless signal transmission for dangerous or hard-to-reach electrical load switching. Utilizing RF (Radio Frequency) or IR communication, encoded control signals are sent to a receiver circuit connected to electro-mechanical relays, enabling wireless ON/OFF control of AC appliances or industrial loads safely.">
+                            <span>View Details</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="project-card glass-panel rounded-2xl overflow-hidden hover:border-cyanaccent/50 transition-all flex flex-col justify-between group" data-category="automation">
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-blueaccent/10 text-blueaccent font-mono text-xs font-semibold uppercase">Industrial Systems</span>
+                            <i class="fa-solid fa-industry text-blueaccent text-xl"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white group-hover:text-cyanaccent transition-colors">Production Step Monitoring System</h4>
+                        <p class="text-blueaccent font-medium text-sm mt-1">Stage Tracking & Process Optimization</p>
+                        <p class="text-muted text-sm mt-4 leading-relaxed">
+                            An industrial monitoring prototype designed to count and track stage progression along a simulated manufacturing line.
+                        </p>
+                    </div>
+                    <div class="px-8 pb-8 pt-0">
+                        <button class="open-modal-btn w-full py-3 rounded-xl glass-panel hover:bg-cyanaccent hover:text-darkbg font-semibold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2"
+                                data-title="Production Step Monitoring System"
+                                data-subtitle="Industrial Line Monitoring Prototype"
+                                data-category="Industrial Automation & Monitoring"
+                                data-desc="Designed for industrial engineering applications, this project models sequential step monitoring in assembly lines. Utilizing digital counters and positional sensors at various production nodes, the system tallies completed units, monitors stage progression, and helps prevent bottlenecks in small-scale manufacturing line simulations.">
+                            <span>View Details</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERESTS SECTION -->
+    <section id="interests" class="py-20 relative bg-black/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-mono text-cyanaccent uppercase tracking-widest mb-2">&gt; 06. Personal Passions</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold">Fields of Interest</h3>
+                <div class="w-16 h-1 bg-gradient-to-r from-cyanaccent to-blueaccent mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Interest Card 1 -->
+                <div class="glass-panel p-8 rounded-2xl text-center hover:border-cyanaccent/50 transition-all group">
+                    <div class="w-16 h-16 rounded-full bg-cyanaccent/10 text-cyanaccent mx-auto flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-cyanaccent group-hover:text-darkbg transition-all">
+                        <i class="fa-solid fa-plane-departure"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Traveling</h4>
+                    <p class="text-muted text-sm leading-relaxed">Exploring new geographical locations, discovering diverse cultural perspectives, and broadening overall worldview through journeying.</p>
+                </div>
+
+                <!-- Interest Card 2 -->
+                <div class="glass-panel p-8 rounded-2xl text-center hover:border-cyanaccent/50 transition-all group">
+                    <div class="w-16 h-16 rounded-full bg-cyanaccent/10 text-cyanaccent mx-auto flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-cyanaccent group-hover:text-darkbg transition-all">
+                        <i class="fa-solid fa-gamepad"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Games & Sports</h4>
+                    <p class="text-muted text-sm leading-relaxed">Engaging in sports and strategic games that foster teamwork, competitive focus, quick critical decision making, and physical well-being.</p>
+                </div>
+
+                <!-- Interest Card 3 -->
+                <div class="glass-panel p-8 rounded-2xl text-center hover:border-cyanaccent/50 transition-all group">
+                    <div class="w-16 h-16 rounded-full bg-cyanaccent/10 text-cyanaccent mx-auto flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-cyanaccent group-hover:text-darkbg transition-all">
+                        <i class="fa-solid fa-atom"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Science & Technology</h4>
+                    <p class="text-muted text-sm leading-relaxed">Keeping abreast of emerging electronics advancements, modern computing breakthroughs, renewable energy innovations, and tech engineering trends.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-mono text-cyanaccent uppercase tracking-widest mb-2">&gt; 07. Reach Out</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold">Get In Touch</h3>
+                <div class="w-16 h-1 bg-gradient-to-r from-cyanaccent to-blueaccent mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-6xl mx-auto">
+                
+                <!-- Contact Info Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    <h4 class="text-2xl font-bold">Let's Connect</h4>
+                    <p class="text-muted text-sm leading-relaxed">
+                        I am actively seeking internship, apprenticeship, and entry-level engineering project opportunities. Feel free to contact me directly using the information below or by sending a message via the form.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <!-- Direct Email Card -->
+                        <a href="mailto:safwansabitfarabi68@gmail.com" class="p-5 rounded-2xl glass-panel hover:border-cyanaccent/50 transition-all flex items-center gap-4 group block">
+                            <div class="w-12 h-12 rounded-xl bg-cyanaccent/10 text-cyanaccent flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-muted uppercase font-mono block">Send an Email</span>
+                                <span class="font-semibold text-sm sm:text-base text-white group-hover:text-cyanaccent transition-colors">safwansabitfarabi68@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <!-- Direct Call Card -->
+                        <a href="tel:+8801838838488" class="p-5 rounded-2xl glass-panel hover:border-cyanaccent/50 transition-all flex items-center gap-4 group block">
+                            <div class="w-12 h-12 rounded-xl bg-cyanaccent/10 text-cyanaccent flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-muted uppercase font-mono block">Direct Call / WhatsApp</span>
+                                <span class="font-semibold text-sm sm:text-base text-white group-hover:text-cyanaccent transition-colors">+880 1838-838488</span>
+                            </div>
+                        </a>
+
+                        <!-- Location Card -->
+                        <div class="p-5 rounded-2xl glass-panel flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-cyanaccent/10 text-cyanaccent flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-muted uppercase font-mono block">Current City</span>
+                                <span class="font-semibold text-sm sm:text-base text-white">Chattogram, Bangladesh</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form Column -->
+                <div class="lg:col-span-7">
+                    <form id="contact-form" class="glass-panel p-8 rounded-2xl space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="contact-name" class="block text-xs font-mono uppercase text-muted mb-2">Your Name *</label>
+                                <input type="text" id="contact-name" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl bg-darkbg/50 border border-white/10 focus:border-cyanaccent focus:outline-none text-sm text-white placeholder-gray-500 transition-colors">
+                            </div>
+                            <div>
+                                <label for="contact-email" class="block text-xs font-mono uppercase text-muted mb-2">Your Email *</label>
+                                <input type="email" id="contact-email" required placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl bg-darkbg/50 border border-white/10 focus:border-cyanaccent focus:outline-none text-sm text-white placeholder-gray-500 transition-colors">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="contact-subject" class="block text-xs font-mono uppercase text-muted mb-2">Subject *</label>
+                            <input type="text" id="contact-subject" required placeholder="Engineering Internship Inquiry" class="w-full px-4 py-3 rounded-xl bg-darkbg/50 border border-white/10 focus:border-cyanaccent focus:outline-none text-sm text-white placeholder-gray-500 transition-colors">
+                        </div>
+
+                        <div>
+                            <label for="contact-message" class="block text-xs font-mono uppercase text-muted mb-2">Message *</label>
+                            <textarea id="contact-message" required rows="4" placeholder="Hello Safwan, I would like to discuss..." class="w-full px-4 py-3 rounded-xl bg-darkbg/50 border border-white/10 focus:border-cyanaccent focus:outline-none text-sm text-white placeholder-gray-500 transition-colors resize-none"></textarea>
+                        </div>
+
+                        <!-- Form Status Alert Message -->
+                        <div id="form-alert" class="hidden p-4 rounded-xl text-xs font-mono"></div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-cyanaccent to-blueaccent text-darkbg font-bold text-sm uppercase tracking-wider shadow-lg shadow-cyanaccent/20 hover:shadow-cyanaccent/40 hover:scale-[1.02] transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT DETAILS MODAL POPUP -->
+    <div id="project-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="modal-card glass-panel max-w-2xl w-full rounded-2xl overflow-hidden border-cyanaccent/30 shadow-2xl relative">
+            
+            <button id="close-modal" aria-label="Close Project Details" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/40 hover:bg-cyanaccent hover:text-darkbg text-white flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="p-8">
+                <span id="modal-category" class="inline-block px-3 py-1 rounded-full bg-cyanaccent/10 text-cyanaccent font-mono text-xs font-semibold uppercase mb-3">Category</span>
+                <h3 id="modal-title" class="text-2xl sm:text-3xl font-bold text-white">Project Title</h3>
+                <p id="modal-subtitle" class="text-cyanaccent font-medium text-sm mt-1">Subtitle</p>
+
+                <div class="w-full h-px bg-white/10 my-6"></div>
+
+                <div class="space-y-4">
+                    <h5 class="text-xs font-mono uppercase text-muted tracking-wider">Project Overview</h5>
+                    <p id="modal-desc" class="text-gray-300 dark:text-gray-300 text-sm leading-relaxed">
+                        Detailed description text.
+                    </p>
+                </div>
+
+                <div class="mt-8 pt-4 border-t border-white/10 flex justify-end">
+                    <button id="modal-ok-btn" class="px-6 py-2.5 rounded-xl bg-cyanaccent text-darkbg font-bold text-xs uppercase tracking-wider hover:bg-cyanaccent/80 transition-colors">
+                        Close Overview
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="py-12 border-t border-white/10 relative z-10 bg-darkbg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+                <div>
+                    <h5 class="text-lg font-bold text-white">Safwan Sabit Farabi</h5>
+                    <p class="text-cyanaccent text-xs font-mono mt-1">Electrical & Electronic Engineering Student • IIUC</p>
+                    <p class="text-muted text-xs italic mt-2">"Building knowledge. Exploring technology. Creating solutions."</p>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-6 text-xs font-medium">
+                    <a href="#home" class="hover:text-cyanaccent transition-colors">Home</a>
+                    <a href="#about" class="hover:text-cyanaccent transition-colors">About</a>
+                    <a href="#skills" class="hover:text-cyanaccent transition-colors">Skills</a>
+                    <a href="#projects" class="hover:text-cyanaccent transition-colors">Projects</a>
+                    <a href="#contact" class="hover:text-cyanaccent transition-colors">Contact</a>
+                </div>
+
+                <div class="text-xs font-mono text-muted text-center md:text-right">
+                    <p>© 2026 Safwan Sabit Farabi.</p>
+                    <p class="mt-0.5">All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back To Top Button -->
+    <button id="back-to-top" aria-label="Back to Top" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full glass-panel border-cyanaccent/40 text-cyanaccent flex items-center justify-center opacity-0 pointer-events-none hover:bg-cyanaccent hover:text-darkbg transition-all shadow-xl">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // 1. Loading Screen Hider
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.classList.add('opacity-0');
+                setTimeout(() => loader.style.display = 'none', 500);
+            }, 600);
+
+            // 2. Theme Switcher Logic
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            themeToggleBtn.addEventListener('click', () => {
+                document.documentElement.classList.toggle('dark');
+                document.documentElement.classList.toggle('light');
+            });
+
+            // 3. Typing Effect Animation
+            const typedTextSpan = document.getElementById('typed-text');
+            const textArray = [
+                "EEE Student", 
+                "Electronics Enthusiast", 
+                "Engineering Project Developer", 
+                "Technology Enthusiast"
+            ];
+            let arrayIdx = 0;
+            let charIdx = 0;
+            let isDeleting = false;
+
+            function typeEffect() {
+                const currentText = textArray[arrayIdx];
+                if (isDeleting) {
+                    typedTextSpan.textContent = currentText.substring(0, charIdx - 1);
+                    charIdx--;
+                } else {
+                    typedTextSpan.textContent = currentText.substring(0, charIdx + 1);
+                    charIdx++;
+                }
+
+                let typeSpeed = isDeleting ? 40 : 80;
+
+                if (!isDeleting && charIdx === currentText.length) {
+                    typeSpeed = 2000; // Pause at full word
+                    isDeleting = true;
+                } else if (isDeleting && charIdx === 0) {
+                    isDeleting = false;
+                    arrayIdx = (arrayIdx + 1) % textArray.length;
+                    typeSpeed = 500;
+                }
+
+                setTimeout(typeEffect, typeSpeed);
+            }
+            typeEffect();
+
+            // 4. Interactive Hero Canvas Circuit Particle System
+            const canvas = document.getElementById('hero-canvas');
+            const ctx = canvas.getContext('2d');
+            let width, height, particles;
+
+            function resizeCanvas() {
+                width = canvas.width = canvas.parentElement.clientWidth;
+                height = canvas.height = canvas.parentElement.clientHeight;
+                initParticles();
+            }
+
+            function initParticles() {
+                particles = [];
+                const particleCount = Math.floor(width / 20);
+                for (let i = 0; i < particleCount; i++) {
+                    particles.push({
+                        x: Math.random() * width,
+                        y: Math.random() * height,
+                        vx: (Math.random() - 0.5) * 0.8,
+                        vy: (Math.random() - 0.5) * 0.8,
+                        radius: Math.random() * 2 + 1
+                    });
+                }
+            }
+
+            function drawParticles() {
+                ctx.clearRect(0, 0, width, height);
+                ctx.fillStyle = '#00f2fe';
+                ctx.strokeStyle = 'rgba(0, 242, 254, 0.15)';
+
+                for (let i = 0; i < particles.length; i++) {
+                    let p = particles[i];
+                    p.x += p.vx;
+                    p.y += p.vy;
+
+                    if (p.x < 0 || p.x > width) p.vx *= -1;
+                    if (p.y < 0 || p.y > height) p.vy *= -1;
+
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fill();
+
+                    // Connect circuit node lines
+                    for (let j = i + 1; j < particles.length; j++) {
+                        let p2 = particles[j];
+                        let dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+                        if (dist < 120) {
+                            ctx.beginPath();
+                            ctx.moveTo(p.x, p.y);
+                            ctx.lineTo(p2.x, p2.y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+                requestAnimationFrame(drawParticles);
+            }
+
+            window.addEventListener('resize', resizeCanvas);
+            resizeCanvas();
+            drawParticles();
+
+            // 5. Skills Data and Filtering Logic
+            const skillsData = {
+                software: [
+                    { name: 'C Programming Language', icon: 'fa-solid fa-code', level: 80 },
+                    { name: 'AutoCAD Design', icon: 'fa-solid fa-compass-drafting', level: 75 },
+                    { name: 'Proteus Circuit Simulation', icon: 'fa-solid fa-microchip', level: 85 },
+                    { name: 'Multisim Simulation', icon: 'fa-solid fa-wave-square', level: 80 },
+                    { name: 'MATLAB Coding', icon: 'fa-solid fa-square-root-variable', level: 70 },
+                    { name: 'Microsoft Office (Word, Excel, PowerPoint)', icon: 'fa-solid fa-file-lines', level: 90 }
+                ],
+                hardware: [
+                    { name: 'Basic to Complex Circuit Design', icon: 'fa-solid fa-diagram-project', level: 85 },
+                    { name: 'Analog & Digital Electronics', icon: 'fa-solid fa-plug-circle-bolt', level: 80 },
+                    { name: 'Microcontroller Programming', icon: 'fa-solid fa-microchip', level: 75 },
+                    { name: 'Microprocessor Systems', icon: 'fa-solid fa-memory', level: 70 },
+                    { name: 'Project Management', icon: 'fa-solid fa-list-check', level: 85 }
+                ],
+                languages: [
+                    { name: 'Bangla', icon: 'fa-solid fa-comments', desc: 'Native / Fluent' },
+                    { name: 'English', icon: 'fa-solid fa-globe', desc: 'Professional Working Proficiency' }
+                ]
+            };
+
+            const skillsContainer = document.getElementById('skills-container');
+            const skillTabBtns = document.querySelectorAll('.skill-tab-btn');
+
+            function renderSkills(category) {
+                skillsContainer.innerHTML = '';
+                const list = skillsData[category];
+
+                list.forEach(skill => {
+                    const card = document.createElement('div');
+                    card.className = 'glass-panel p-6 rounded-2xl hover:border-cyanaccent/50 transition-all flex flex-col justify-between group';
+
+                    if (category === 'languages') {
+                        card.innerHTML = `
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-cyanaccent/10 text-cyanaccent flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                                    <i class="${skill.icon}"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg text-white">${skill.name}</h4>
+                                    <span class="text-xs font-mono text-cyanaccent">${skill.desc}</span>
+                                </div>
+                            </div>
+                        `;
+                    } else {
+                        card.innerHTML = `
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-lg bg-cyanaccent/10 text-cyanaccent flex items-center justify-center text-lg">
+                                            <i class="${skill.icon}"></i>
+                                        </div>
+                                        <h4 class="font-bold text-white text-base">${skill.name}</h4>
+                                    </div>
+                                    <span class="font-mono text-xs text-cyanaccent font-semibold">${skill.level}%</span>
+                                </div>
+                                <div class="w-full h-2 rounded-full bg-gray-800 overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-cyanaccent to-blueaccent rounded-full transition-all duration-1000" style="width: ${skill.level}%"></div>
+                                </div>
+                            </div>
+                        `;
+                    }
+                    skillsContainer.appendChild(card);
+                });
+            }
+
+            skillTabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    skillTabBtns.forEach(b => {
+                        b.classList.remove('active', 'text-white');
+                        b.classList.add('text-muted');
+                    });
+                    btn.classList.add('active', 'text-white');
+                    btn.classList.remove('text-muted');
+                    renderSkills(btn.dataset.category);
+                });
+            });
+
+            // Initial skills load
+            renderSkills('software');
+
+            // 6. Project Filtering
+            const filterBtns = document.querySelectorAll('.project-filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => {
+                        b.classList.remove('active', 'text-white');
+                        b.classList.add('text-muted');
+                    });
+                    btn.classList.add('active', 'text-white');
+                    btn.classList.remove('text-muted');
+
+                    const filter = btn.dataset.filter;
+                    projectCards.forEach(card => {
+                        if (filter === 'all' || card.dataset.category === filter) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // 7. Project Details Modal Popup
+            const modal = document.getElementById('project-modal');
+            const openModalBtns = document.querySelectorAll('.open-modal-btn');
+            const closeModalBtn = document.getElementById('close-modal');
+            const modalOkBtn = document.getElementById('modal-ok-btn');
+
+            openModalBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.getElementById('modal-title').textContent = btn.dataset.title;
+                    document.getElementById('modal-subtitle').textContent = btn.dataset.subtitle;
+                    document.getElementById('modal-category').textContent = btn.dataset.category;
+                    document.getElementById('modal-desc').textContent = btn.dataset.desc;
+                    modal.classList.add('modal-active');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            function closeModal() {
+                modal.classList.remove('modal-active');
+                document.body.style.overflow = 'auto';
+            }
+
+            closeModalBtn.addEventListener('click', closeModal);
+            modalOkBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+
+            // 8. Contact Form Handling
+            const contactForm = document.getElementById('contact-form');
+            const formAlert = document.getElementById('form-alert');
+
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                formAlert.className = "p-4 rounded-xl text-xs font-mono bg-cyanaccent/20 text-cyanaccent border border-cyanaccent/40 block";
+                formAlert.textContent = "Thank you! Your message has been prepared. Redirecting to your mail client...";
+
+                const name = document.getElementById('contact-name').value;
+                const email = document.getElementById('contact-email').value;
+                const subject = document.getElementById('contact-subject').value;
+                const message = document.getElementById('contact-message').value;
+
+                setTimeout(() => {
+                    window.location.href = `mailto:safwansabitfarabi68@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message)}`;
+                    contactForm.reset();
+                }, 1000);
+            });
+
+            // 9. Mobile Navigation Drawer
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // 10. Scroll Progress & Back-To-Top Button
+            const scrollProgress = document.getElementById('scroll-progress');
+            const backToTopBtn = document.getElementById('back-to-top');
+
+            window.addEventListener('scroll', () => {
+                const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+                const currentScroll = window.scrollY;
+                const scrollPercent = (currentScroll / totalScroll) * 100;
+                scrollProgress.style.width = scrollPercent + '%';
+
+                if (currentScroll > 400) {
+                    backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+                } else {
+                    backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+                }
+            });
+
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // 11. Custom Cursor Logic
+            const cursor = document.getElementById('custom-cursor');
+            const cursorDot = document.getElementById('custom-cursor-dot');
+            const cursorToggle = document.getElementById('cursor-toggle');
+            let cursorEnabled = false;
+
+            cursorToggle.addEventListener('click', () => {
+                cursorEnabled = !cursorEnabled;
+                if (cursorEnabled) {
+                    cursor.style.display = 'block';
+                    cursorDot.style.display = 'block';
+                    cursorToggle.classList.add('bg-cyanaccent', 'text-darkbg');
+                } else {
+                    cursor.style.display = 'none';
+                    cursorDot.style.display = 'none';
+                    cursorToggle.classList.remove('bg-cyanaccent', 'text-darkbg');
+                }
+            });
+
+            window.addEventListener('mousemove', (e) => {
+                if (!cursorEnabled) return;
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+                cursorDot.style.left = e.clientX + 'px';
+                cursorDot.style.top = e.clientY + 'px';
+            });
+        });
+    </script>
+</body>
+</html>
